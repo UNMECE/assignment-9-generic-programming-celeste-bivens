@@ -133,15 +133,15 @@ int main(){
     std::cout << "maximum and minimum of array is " << int_array.max() << " and " << int_array.min() << std::endl;
 
     //print sliced array.
-    auto slice_array = int_array.slice(2,4);
+    auto sliced_array = int_array.slice(2,4);
     std::cout << "sliced array elements: ";
     for (int i = 0; i < new_size; ++i) 
     {
-        std::cout << slice_array[i] << ", ";
+        std::cout << sliced_array[i] << ", ";
     }
     std::cout << std::endl;
     
     //deallocating memory for the sliced array. 
-    delete [] slice_array;
+    delete [] sliced_array;
     return 0;
 }
