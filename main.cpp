@@ -19,9 +19,13 @@ public:
     }
 
     GenericArray& addElement(const T& value){
-        if(size <= capacity)//Making sure array cannot go over the designated size
+        if(size <= capacity)//Making sure array cannot go over the designated capacity
         {
             data[size++] = value;
+        }
+        else
+        {
+            std::cout << "array is larger than designated capacity" <<std::endl;
         }
         return *this;
     }
@@ -111,8 +115,7 @@ int main(){
     .addElement(99)
     .addElement(200)
     .addElement(35)
-    .addElement(25)
-    .addElement(15);
+    .addElement(25);
 
     auto size = int_array.length();
     auto index = 0;
